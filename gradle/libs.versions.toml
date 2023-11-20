@@ -35,4 +35,5 @@ org-jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.re
 com-android-library = { id = "com.android.library", version.ref = "agp" }
 
 [bundles]
+#compose-ui = ["ui","ui-graphics","ui-tooling","ui-tooling-preview"]
 
