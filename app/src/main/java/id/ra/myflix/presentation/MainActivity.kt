@@ -10,22 +10,23 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import id.ra.myflix.auth.api.AuthFeature
 import id.ra.myflix.designsystem.presentation.theme.MyFlixTheme
 import id.ra.myflix.home.impl.presentation.screen.home.HomeScreen
+import javax.inject.Inject
 
 class MainActivity : ComponentActivity() {
+
+    @Inject
+    lateinit var authFeature: AuthFeature
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             MyFlixTheme {
-                MyFlixApp()
+                HomeScreen()
             }
         }
     }
 }
 
-@Composable fun MyFlixApp() {
-    Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-        HomeScreen()
-    }
-}
