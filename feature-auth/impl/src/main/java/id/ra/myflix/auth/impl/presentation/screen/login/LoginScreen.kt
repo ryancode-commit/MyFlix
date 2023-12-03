@@ -1,4 +1,17 @@
 package id.ra.myflix.auth.impl.presentation.screen.login
 
-class LoginScreen {
+import androidx.compose.foundation.layout.Column
+import androidx.compose.material3.Button
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+
+@Composable fun LoginScreen(
+    onToRegister : () -> Unit
+){
+    Column {
+        Text(text = "Login Screen")
+        Button(onClick = {onToRegister()}) {
+            Text(text = "Go to register screen")
+        }
+    }
 }

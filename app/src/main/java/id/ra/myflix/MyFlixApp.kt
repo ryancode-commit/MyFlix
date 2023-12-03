@@ -1,4 +1,7 @@
 package id.ra.myflix
 
-class MyFlixApp {
-}
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class MyFlixApp : Application()

@@ -1,4 +1,7 @@
 package id.ra.myflix.auth.api
 
-interface AuthFeature {
+import id.ra.myflix.designsystem.presentation.navigation.FeatureEntry
+
+interface AuthFeature : FeatureEntry {
+    val authRoute :String
 }

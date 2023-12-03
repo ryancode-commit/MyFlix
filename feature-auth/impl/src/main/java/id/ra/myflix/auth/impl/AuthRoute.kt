@@ -1,4 +1,7 @@
 package id.ra.myflix.auth.impl
 
-class AuthRoute {
+sealed class AuthRoute (val route : String){
+    object  Login : AuthRoute("login")
+    object  Register : AuthRoute("Register")
+
 }
